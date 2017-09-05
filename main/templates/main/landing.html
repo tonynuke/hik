@@ -1,0 +1,519 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navigation %}
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a class="nav-btn" nav="company" href="#">О компании</a></li>
+            <li><a class="nav-btn" nav="services" href="#">Услуги</a></li>
+            {#            <li><a class="nav-btn" nav="auto" href="#">Автоматизация</a></li>#}
+            <li><a class="nav-btn" nav="egais" href="#">ЕГАИС</a></li>
+            <li><a class="nav-btn" nav="contacts" href="#">Контакты</a></li>
+        </ul>
+    </div>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+    <div class="container" style="background-color: white">
+
+        <!-- about -->
+        <div id="company">
+            <div class="container-fluid" style="min-height: 500px;">
+                <h2 class="text-center">
+                    О компании
+                </h2>
+                <hr>
+
+                <h3>
+                    ООО "Хайруллины и К" - торговое оборудование и автоматизация бизнеса
+                </h3>
+
+                <p>
+                    У нас Вы можете приобрести новую контрольно-кассовую технику, удовлетворяющую требованиям 54-ФЗ или
+                    модернизировать Ваши ККМ для функциониррования в онлайн-режиме.
+                    Наши специалисты помогут Вам освоить новую технику, зарегистрировать ее по новым правилам,
+                    подключиться к ОФД и начать работать согласно нового Закона.
+                </p>
+                <p>
+                    Более чем 20-летний опыт работы и профессиональный уровень подготовки специалистов позволяет ООО
+                    «Хайруллины и К» в кратчайшие сроки обеспечивать своим клиентам высочайший уровень технического
+                    сервиса, широчайший ассортимент торговой техники, оборудования, услуги по установке и настройке
+                    технических и программных средств автоматизации, монтаж торгового оборудования и торговой мебели.
+                    Нашими услугами и товарами с 1992 года воспользовались тысячи компаний и индивидуальных
+                    предпринимателей, работающих в сфере торговли, производства, оказания услуг, бюджетные организации.
+                    Внимательность к вопросам клиентов и высокий уровень сервиса помогли нам сформировать постоянную
+                    клиентскую базу и завоевать высокую репутацию на рынке.
+                </p>
+
+                {#            <button class="btn btn-primary btn-block" type="button">#}
+                {#                Ассортимент товаров#}
+                {#            </button>#}
+
+                <div class="container-fluid text-center">
+                    <div class="row">
+                        <a href="{% url 'store' %}">
+                            <button class="btn btn-primary btn-circle">
+                                <div style="white-space: normal">
+                                    <h4>
+                                        Ассортимент товаров
+                                    </h4>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                {#            <h3>#}
+                {#                Ассортимент товаров#}
+                {#            </h3>#}
+                {#            <h4>Торговая техника</h4>#}
+                {#            <h4>Весовое оборудование</h4>#}
+                {#            <h4>Торговое оборудование</h4>#}
+                {#            <h4>Торговая мебель и дополнительное оборудование</h4>#}
+
+            </div>
+        </div>
+
+        <!-- services -->
+        <div id="services">
+            <div class="container-fluid" style="min-height: 500px;">
+                <h2 class="text-center">
+                    Услуги
+                </h2>
+                <hr>
+
+                <h3>
+                    ООО "Хайруллины и К" - поверка весов, обслуживание ККМ и другие услуги
+                </h3>
+
+                <div class="container-fluid text-center" style="margin-top: 100px;">
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-circle" data-target="#fixModal"
+                                data-toggle="modal">
+                            <div style="white-space: normal">
+                                <h4>
+                                    Поверка, ремонт и техобслуживание весов
+                                </h4>
+                            </div>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-circle" data-target="#fixOtherModal"
+                                data-toggle="modal">
+                            <div style="white-space: normal">
+                                <h4>
+                                    Ремонт, обслуживание ККМ и другой торговой техники
+                                </h4>
+                            </div>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-circle" data-target="#changeModal"
+                                data-toggle="modal">
+                            <div style="white-space: normal">
+                                <h4>
+                                    Замена ЭКЛЗ
+                                </h4>
+                            </div>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-circle" data-target="#itModal"
+                                data-toggle="modal">
+                            <div style="white-space: normal">
+                                <h4>
+                                    Комплексное информационно-техническое обслуживание
+                                </h4>
+                            </div>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-circle" data-target="#storeModal"
+                                data-toggle="modal">
+                            <div style="white-space: normal">
+                                <h4>
+                                    Оборудование магазинов, точек общепита, офисов, отдельных рабочих мест
+                                </h4>
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- egais -->
+        <div id="egais">
+            <div class="container-fluid" style="min-height: 500px;">
+                <h2 class="text-center">
+                    ЕГАИС
+                </h2>
+                <hr>
+
+                <h3>
+                    Что нужно знать о ЕГАИС
+                </h3>
+                <p>
+                    ЕГАИС – это единая государственная автоматизированная информационная система.
+                    Проще говоря, программа для государственного контроля над производством и продажей спиртных
+                    напитков.
+                    Согласно федеральному закону № 171-ФЗ, розничным магазинам для продажи алкоголя необходимо
+                    установить на своих кассах программный модуль, с помощью которого данные о продаже алкоголя
+                    автоматически передаются в единую систему.
+                </p>
+
+                <h4>
+                    Сроки обязательного подключения предприятий торговли к системе ЕГАИС
+                </h4>
+                <p>
+                    В данный момент для представителей розничной торговли система работает в тестовом режиме, но уже с 1
+                    января 2016 они будут обязаны работать с системой в части подтверждения факта закупки, а с 1 июля
+                    2016 года – в части фиксации продаж.
+                    То есть, начиная со второго полугодия 2016 года ВСЕ предприятия розничной торговли алкогольной
+                    продукцией будут ОБЯЗАНЫ подключиться к системе ЕГАИС.
+                </p>
+
+                <h4>
+                    Необходимые технические средства для подключения к ЕГАИС
+                </h4>
+                <p>
+                <ul>
+                    <li>INTERNET скорость от 256 кбит/с и выше</li>
+                    <li>сканер двумерных (2D) штрихкодов PDF 417 (обратите внимание, что большинство сканеров,
+                        используемых в розничной торговле, являются одномерными и не подходят для использования с
+                        ЕГАИС!)
+                    </li>
+                    <li>модернизированное кассовое программное обеспечение, прошедшее тестирование на совместимость с ПО
+                        ЕГАИС
+                    </li>
+                    <li>установленное программное обеспечение ЕГАИС</li>
+                    <li>аппаратный криптоключ JaCarta со встроенным криптопровайдером PKI/ГОСТ</li>
+                    <li>усиленная квалифицированная электронная подпись</li>
+                </ul>
+                </p>
+
+            </div>
+        </div>
+
+        <!-- contact information -->
+        <div id="contacts">
+            <div class="container-fluid" style="min-height: 500px;">
+                <h2 class="text-center">
+                    Контакты
+                </h2>
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p>
+                            Вы можете купить кассовые аппараты, фискальные регистраторы, весы, сканеры штрих кодов,
+                            торговое оборудование в компании Хайруллины и К в офисах, расположенных в городах Уфа,
+                            Салават, Ишимбай, Мелеуз.
+                        </p>
+                        <p>
+                            В наших офисах Вы сможете не только приобрести торговую технику и оборудование, но и
+                            заключить договор на обслуживание ККМ, провести поверку весового оборудования, получить
+                            другие услуги, связанные с ремонтом и обслуживанием торговой техники.
+                        </p>
+                        <p>
+                            Хайруллины и К предлагает широкий спектр программных решений для автоматизации Вашего
+                            бизнеса. У нас Вы можете заказать решения для автоматизации торговли, ведения бухгалтерии,
+                            предприятий общепита, промышленного производства и многого другого.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>
+                            <button class="btn btn-primary btn-block" type="button"
+                                    data-toggle="modal" data-target="#myModal" title="Показать на карте"
+                                    link="CBURu4WMkD">
+                                УФА
+                                +7 (347) 285-55-50
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn btn-primary btn-block" type="button"
+                                    data-toggle="modal" data-target="#myModal" title="Показать на карте"
+                                    link="CBURu4BKSB">
+                                ИШИМБАЙ
+                                +7 (34794) 2-40-55
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn btn-primary btn-block" type="button"
+                                    data-toggle="modal" data-target="#myModal" title="Показать на карте"
+                                    link="CBURqOaRoB">
+                                САЛАВАТ
+                                +7 (3476) 33-16-28
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn btn-primary btn-block" type="button"
+                                    data-toggle="modal" data-target="#myModal" title="Показать на карте">
+                                МЕЛЕУЗ
+                                +7 (917) 42-39-456
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="row">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- map window -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Карта</h4>
+                </div>
+
+                <div>
+                    <iframe src="" width="560" height="400" frameborder="0" id="address"></iframe>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ремонт весов -->
+    <div id="fixModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Проверка, ремонт и техобслуживание весов</h4>
+                </div>
+
+
+                <div class="container-fluid">
+                    <p>
+                        Периодическая поверка весов проводится не реже одного раза в год. Внеочередная поверка весов
+                        проводится:
+                    <ul>
+                        <li>в случае повреждения поверительного клейма (пломба госповерителя).</li>
+                        <li>в случае утраты свидетельства о поверке.</li>
+                        <li>в случае известного или предполагаемого ударного механического воздействия на
+                            весоизмерительный прибор.
+                        </li>
+                    </ul>
+                    В нашем сервисном центре, перед поверкой, весы проходят обязательное техническое обслуживание,
+                    включающее:
+                    <ul>
+                        <li>Внешний осмотр оборудования.</li>
+                        <li>Очистка приборов от загрязнения.</li>
+                        <li>Диагностика оборудования.</li>
+                        <li>Калибровка образцовыми (поверенными) эталонными гирями и при необходимости юстировка
+                            весов.
+                        </li>
+                        <li>При необходимости - устранение механических повреждений.</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ремонт прочего -->
+    <div id="fixOtherModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">
+                        Ремонт, обслуживание ККМ и другой торговой техники
+                    </h4>
+                </div>
+
+                <div class="container-fluid">
+                    <p>
+                        Центр технического обслуживания ООО "Хайруллины и К" осуществляет ремонт и техническое
+                        обслуживание контрольно-кассовой техники.
+                        С клиентами Компании заключается договор на проведение сервисного сопровождения длительностью 1
+                        месяц, 3 месяца или 1 год.
+                        Контракт предусматривает контроль технического состояния аппаратов, работы по устранению
+                        неисправностей и другие услуги.
+                        Техническое обслуживание кассовых аппаратовТехническое обслуживание ККМ - это комплекс
+                        мероприятий по введению в эксплуатацию и обеспечению работоспособности контрольно-кассовой
+                        машины.
+                        В соответствии с Федеральным законом № 54 от 22 мая 2003г. и Постановлением Правительства № 470
+                        от 23 июля 2007г., эксплуатация ККМ разрешена после ее регистрации в территориальном налоговом
+                        органе. ТО проводится в том ЦТО, где контрольно-кассовая машина находится на учете. В
+                        соответствии с Кодексом РФ об административных правонарушениях, прием денежных средств от
+                        населения без зарегистрированной ККМ влечет штраф до 40 000 рублей.
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Замена ЭКЛЗ -->
+    <div id="changeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">
+                        Замена ЭКЛЗ
+                    </h4>
+                </div>
+
+                <div class="container-fluid">
+                    <p>
+                        Наши специалисты проводят ремонт, сервисное обслуживание и замену защищенной электронной
+                        контрольной ленты (ЭКЛЗ).
+                        Электронная контрольная лента защищенная - это технический модуль, обеспечивающий защиту
+                        регистрируемой в нем информации и предназначенный для длительного хранения и обработки данных о
+                        каждом денежном расчете, проведенном при помощи ККТ. Функции ЭКЛЗ:
+
+                    <ul>
+                        <li>получение от ККТ данных о проведенных денежных расчетах.</li>
+                        <li>генерирование на основе полученной информации КПК (криптографического проверочного кода)
+                            отчета/чека.
+                        </li>
+                        <li>передача полученного значения КПК в ККМ для вывода на печать отчета/чека в составе
+                            контрольно-кассовой ленты или отдельно, во время оформления.
+                        </li>
+                        <li>архивирование данных о проведенных денежных расчетах для долговременного хранения.</li>
+                        <li>формирование отчета сменного итога при закрытии или во время смены.</li>
+                        <li>занесение отчета сменного итога для хранения в памяти ЭКЛЗ.</li>
+                        <li>передача данных из памяти модуля в ККТ для вывода на печать отчетов.</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IT услуги -->
+    <div id="itModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">
+                        Комплексное информационно-техническое обслуживание
+                    </h4>
+                </div>
+
+                <div class="container-fluid">
+                    <p>
+                        Компания "Хайруллины и К" предлагает своим клиентам комплексное информационно-техническое
+                        обслуживание в любых IT-направлениях в любых отраслях деятельности
+                        Объем услуг оговаривается индивидуально для каждого клиента. Комплексное обслуживание избавляет
+                        клиента от необходимости содержать в штате своего IT-специалиста или целый IT-отдела
+                    <ul>
+                        <li>Техническая поддержка оборудования</li>
+                        <li>Внедрение и сопровождение программного обеспечения</li>
+                        <li>Удобная информационная поддержка - по телефону, средствами удаленного доступа, оперативный
+                            выезд на место
+                        </li>
+                        <li>Установка новых и масштабирование существующих программных и аппаратных решений</li>
+                        <li>Консультирование сотрудников по вопросам работы программных и аппаратных комплексов</li>
+                        <li>Творческий подход в решении сложных и нестандартных задач</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- магазины -->
+    <div id="storeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">
+                        Оборудование магазинов, точек общепита, офисов, отдельных рабочих мест
+                    </h4>
+                </div>
+
+                <div class="container-fluid">
+                    <p>
+                        Многолетний опыт работы ООО "Хайруллины и К" позволяет предложить клиентам наиболее выгодные
+                        решения по организации бизнес-процессов!
+                        Мы превратим пустое пространство Вашего помещения в эффективный действующий доходный бизнес. С
+                        нуля до готовности принять первых клиентов - торговая мебель, оборудование, компьютерная и
+                        торговая техника, расходные материалы.
+                    <ul>
+                        <li>Начинающим предпринимателям мы посоветуем оптимальные варианты решений по соотношению
+                            цена/качество
+                        </li>
+                        <li>Опытным бизнесменам обеспечим реализацию их новых проектов</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{#<!-- load js files -->#}
+{#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+{##}
+{#<script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>#}
+{##}
+{#<script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>#}
+{#<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Geolink"></script>#}
+{##}
+{#<!-- scripts -->#}
+{#<script>#}
+{#    $( document ).ready(function(event) {#}
+{##}
+{#        //show city on map after button was pressed#}
+{#        $(document).on('click', '.btn-block', (function (event) {#}
+{#            event.preventDefault();#}
+{##}
+{#            var $link = "https://yandex.ru/map-widget/v1/-/" + ($(this).attr("link"));#}
+{##}
+{#            $('#address').attr('src', $link);#}
+{#        }));#}
+{##}
+{#        // slide down to checked theme#}
+{#        $('.nav').click(function( event ) {#}
+{#            event.preventDefault();#}
+{##}
+{#            var $id = ($(this).attr("nav"));#}
+{#            var el = document.getElementById($id);#}
+{##}
+{#            var scrollTop = $(el).offset().top - 40;#}
+{##}
+{#            $('html, body').animate({#}
+{#                scrollTop: scrollTop#}
+{#            }, 500);#}
+{#        });#}
+{#    });#}
+{##}
+{#</script>#}

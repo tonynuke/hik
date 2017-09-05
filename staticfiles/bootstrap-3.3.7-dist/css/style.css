@@ -1,0 +1,56 @@
+ body{
+        /*zoom: 110%;*/
+        font-family: roboto;
+    }
+
+    .btn-circle {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 50%;
+
+        margin: 0 7px 7px;
+    }
+
+    .btn-circle:hover{
+        box-shadow: 0 1px 20px #101010;
+        border-color: #101010;
+    }
+
+    #logo{
+        color: #101010;
+        font-size: 200px;
+        font-family: gunplay;
+        text-align: center;
+    }
+
+    /*@font-face {*/
+        /*font-family: 'roboto';*/
+        /*src: url('../fonts/roboto.ttf');*/
+        /*src: local('../css/bootstrap-3.3.7-dist/fonts/roboto.ttf')*/
+    /*}*/
+
+    /*@font-face {*/
+        /*font-family: 'gunplay';*/
+        /*src: url('../fonts/gunplay.ttf');*/
+        /*src: local('../css/bootstrap-3.3.7-dist/fonts/gunplay.ttf')*/
+    /*}*/
+
+    .btn:hover{
+        transition: 0.4s;
+    }
+
+     .sidebar-nav li{
+         width: 100%;
+     }
+
+     .sidebar-nav li span{
+         margin-right: 10px;
+     }
+
+     .sidebar-nav li:hover{
+         background-color: #dddddd;
+     }

@@ -1,0 +1,435 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}">
+
+    <style>
+        body{
+{#            zoom: 110%;#}
+            font-family: roboto;
+        }
+
+        .btn-circle-small {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 50%;
+        }
+
+        .btn-circle {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 50%;
+        }
+
+        #logo{
+            color: white;
+            font-size: 200px;
+            font-family: gunplay;
+        }
+
+        @font-face {
+            font-family: 'roboto';
+            src: url({% static 'bootstrap-3.3.7-dist/fonts/roboto.ttf' %});
+            src: local({% static 'bootstrap-3.3.7-dist/fonts/roboto.ttf' %})
+        }
+
+        @font-face {
+            font-family: 'gunplay';
+            src: url({% static 'bootstrap-3.3.7-dist/fonts/gunplay.ttf' %});
+            src: local({% static 'bootstrap-3.3.7-dist/fonts/gunplay.ttf' %})
+        }
+
+        .btn:hover{
+            transition: 0.4s;
+        }
+    </style>
+
+</head>
+<body style="background-color: #aeb6bc">
+
+<!-- navigation bar -->
+<nav class="nav navbar-fixed-top navbar-inverse bg-primary">
+    <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">HиК</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a nav="company" href="#">О компании</a></li>
+                <li><a nav="services" href="#">Услуги</a></li>
+                <li><a nav="auto" href="#">Автоматизация</a></li>
+                <li><a nav="egais" href="#">ЕГАИС</a></li>
+                <li><a nav="contacts" href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- header -->
+<header>
+    <div class="container" style="height: 400px; background-color: #337ab7; padding-top: 40px; margin-top: 40px">
+        <div class="container-fluid" style="">
+            <div class="row text-center">
+                <div class="col-sm-6">
+                    <div id="logo">
+                        KHIK
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                         <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                          </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                              <img src="{% static '../media/mnogo_vesy.png' %}" style="max-height: 300px">
+                            </div>
+
+                            <div class="item">
+                              <img src="{% static '../media/poverka_vesov.png' %}" style="max-height: 300px">
+                            </div>
+
+                            <div class="item">
+                              <img src="{% static '../media/mebel6.png' %}" style="max-height: 300px">
+                            </div>
+                          </div>
+
+                         <!-- Left and right controls -->
+                          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container" style="background-color: white">
+
+<!-- about -->
+    <div id="company">
+        <div class="container-fluid" style="min-height: 500px;">
+            <h2 class="text-center">
+                О компании
+            </h2>
+            <hr>
+
+            <h3>
+                ООО "Хайруллины и К" - торговое оборудование и автоматизация бизнеса
+            </h3>
+
+            <p>
+                У нас Вы можете приобрести новую контрольно-кассовую технику, удовлетворяющую требованиям 54-ФЗ или модернизировать Ваши ККМ для функциониррования в онлайн-режиме.
+                Наши специалисты помогут Вам освоить новую технику, зарегистрировать ее по новым правилам, подключиться к ОФД и начать работать согласно нового Закона.
+            </p>
+            <p>
+                Более чем 20-летний опыт работы и профессиональный уровень подготовки специалистов позволяет ООО «Хайруллины и К» в кратчайшие сроки обеспечивать своим клиентам высочайший уровень технического сервиса, широчайший ассортимент торговой техники, оборудования, услуги по установке и настройке технических и программных средств автоматизации, монтаж торгового оборудования и торговой мебели.
+                Нашими услугами и товарами с 1992 года воспользовались тысячи компаний и индивидуальных предпринимателей, работающих в сфере торговли, производства, оказания услуг, бюджетные организации.
+                Внимательность к вопросам клиентов и высокий уровень сервиса помогли нам сформировать постоянную клиентскую базу и завоевать высокую репутацию на рынке.
+            </p>
+
+{#            <button class="btn btn-primary btn-block" type="button">#}
+{#                Ассортимент товаров#}
+{#            </button>#}
+
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <button type="button" class="btn btn-primary btn-circle">
+                         <div style="white-space: normal">
+                            <h4>
+                                 Ассортимент товаров
+                            </h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+{#            <h3>#}
+{#                Ассортимент товаров#}
+{#            </h3>#}
+{#            <h4>Торговая техника</h4>#}
+{#            <h4>Весовое оборудование</h4>#}
+{#            <h4>Торговое оборудование</h4>#}
+{#            <h4>Торговая мебель и дополнительное оборудование</h4>#}
+
+        </div>
+    </div>
+
+    <!-- services -->
+    <div id="services">
+        <div class="container-fluid" style="min-height: 500px;">
+            <h2 class="text-center">
+                 Услуги
+            </h2>
+            <hr>
+
+            <h3>
+                ООО "Хайруллины и К" - поверка весов, обслуживание ККМ и другие услуги
+            </h3>
+
+            <div class="container-fluid text-center" style="margin-top: 100px;">
+                <div class="row">
+                    <button type="button" class="btn btn-primary btn-circle">
+                        <div style="white-space: normal">
+                            <h4>
+                                Поверка, ремонт и техобслуживание весов
+                            </h4>
+                        </div>
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-circle">
+                        <div style="white-space: normal">
+                            <h4>
+                                Ремонт, обслуживание ККМ и другой торговой техники
+                            </h4>
+                        </div>
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-circle">
+                        <div style="white-space: normal">
+                            <h4>
+                                Замена ЭКЛЗ
+                            </h4>
+                        </div>
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-circle">
+                        <div style="white-space: normal">
+                            <h4>
+                                Комплексное информационно-техническое обслуживание
+                            </h4>
+                        </div>
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-circle">
+                        <div style="white-space: normal">
+                            <h4>
+                                Оборудование магазинов, точек общепита, офисов, отдельных рабочих мест
+                            </h4>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- egais -->
+    <div id="egais">
+        <div class="container-fluid" style="height: 500px;">
+            <h2 class="text-center">
+                 ЕГАИС
+            </h2>
+            <hr>
+
+            <h3>
+                Что нужно знать о ЕГАИС
+            </h3>
+            <p>
+                ЕГАИС – это единая государственная автоматизированная информационная система.
+                Проще говоря, программа для государственного контроля над производством и продажей спиртных напитков.
+                Согласно федеральному закону № 171-ФЗ, розничным магазинам для продажи алкоголя необходимо установить на своих кассах программный модуль, с помощью которого данные о продаже алкоголя автоматически передаются в единую систему.
+            </p>
+
+            <h4>
+                Сроки обязательного подключения предприятий торговли к системе ЕГАИС
+            </h4>
+            <p>
+                В данный момент для представителей розничной торговли система работает в тестовом режиме, но уже с 1 января 2016 они будут обязаны работать с системой в части подтверждения факта закупки, а с 1 июля 2016 года – в части фиксации продаж.
+                То есть, начиная со второго полугодия 2016 года ВСЕ предприятия розничной торговли алкогольной продукцией будут ОБЯЗАНЫ подключиться к системе ЕГАИС.
+            </p>
+
+            <h4>
+                Необходимые технические средства для подключения к ЕГАИС
+            </h4>
+            <p>
+                <ul>
+                    <li>INTERNET скорость от 256 кбит/с и выше</li>
+                    <li>сканер двумерных (2D) штрихкодов PDF 417 (обратите внимание, что большинство сканеров, используемых в розничной торговле, являются одномерными и не подходят для использования с ЕГАИС!)</li>
+                    <li>модернизированное кассовое программное обеспечение, прошедшее тестирование на совместимость с ПО ЕГАИС</li>
+                    <li>установленное программное обеспечение ЕГАИС</li>
+                    <li>аппаратный криптоключ JaCarta со встроенным криптопровайдером PKI/ГОСТ</li>
+                    <li>усиленная квалифицированная электронная подпись</li>
+                </ul>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- contact information -->
+    <div id="contacts">
+        <div class="container-fluid" style="height: 500px;">
+            <h2 class="text-center">
+                 Контакты
+            </h2>
+            <hr>
+
+            <div class="row">
+                                <div class="col-sm-8">
+                    <p>
+                        Вы можете купить кассовые аппараты, фискальные регистраторы, весы, сканеры штрих кодов, торговое оборудование в компании Хайруллины и К в офисах, расположенных в городах Уфа, Салават, Ишимбай, Мелеуз.
+                    </p>
+                    <p>
+                        В наших офисах Вы сможете не только приобрести торговую технику и оборудование, но и заключить договор на обслуживание ККМ, провести поверку весового оборудования, получить другие услуги, связанные с ремонтом и обслуживанием торговой техники.
+                    </p>
+                    <p>
+                        Хайруллины и К предлагает широкий спектр программных решений для автоматизации Вашего бизнеса. У нас Вы можете заказать решения для автоматизации торговли, ведения бухгалтерии, предприятий общепита, промышленного производства и многого другого.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p>
+                        <button class="btn btn-primary btn-block" type="button"
+                                data-toggle="modal" data-target="#myModal" title="Показать на карте"
+                                link="CBURu4WMkD">
+                            УФА
+                            +7 (347) 285-55-50
+                        </button>
+                    </p>
+                    <p>
+                        <button class="btn btn-primary btn-block" type="button"
+                                data-toggle="modal" data-target="#myModal" title="Показать на карте"
+                                link="CBURu4BKSB">
+                            ИШИМБАЙ
+                            +7 (34794) 2-40-55
+                        </button>
+                    </p>
+                    <p>
+                        <button class="btn btn-primary btn-block" type="button"
+                                data-toggle="modal" data-target="#myModal" title="Показать на карте"
+                                link="CBURqOaRoB">
+                            САЛАВАТ
+                            +7 (3476) 33-16-28
+                        </button>
+                    </p>
+                    <p>
+                        <button class="btn btn-primary btn-block" type="button"
+                                data-toggle="modal" data-target="#myModal" title="Показать на карте">
+                            МЕЛЕУЗ
+                            +7 (917) 42-39-456
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">(R) Romanyuk A.A.</p>
+    </div>
+</footer>
+
+
+<!-- map window -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Карта</h4>
+            </div>
+
+            <div>
+                <iframe src="" width="560" height="400" frameborder="0" id="address"></iframe>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- load js files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+
+<script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Geolink"></script>
+
+<!-- scripts -->
+<script>
+    $( document ).ready(function(event) {
+
+        //show city on map after button was pressed
+        $(document).on('click', 'button', (function (event) {
+            event.preventDefault();
+
+            var $link = "https://yandex.ru/map-widget/v1/-/" + ($(this).attr("link"));
+
+            $('#address').attr('src', $link);
+        }));
+
+        // slide down to checked theme
+        $('a').click(function( event ) {
+            event.preventDefault();
+
+            var $id = ($(this).attr("nav"));
+            var el = document.getElementById($id);
+
+            var scrollTop = $(el).offset().top - 40;
+
+            $('html, body').animate({
+                scrollTop: scrollTop
+            }, 500);
+        });
+    });
+
+    // show advertisements
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("advert");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex> slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+</html>
