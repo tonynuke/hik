@@ -1,11 +1,28 @@
  body{
         /*zoom: 110%;*/
         font-family: roboto;
+        background-color: #c5c5c5;
+    }
+
+    #landing{
+        background-color: white;
     }
 
     .btn-circle {
         width: 200px;
         height: 200px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 50%;
+
+        margin: 0 7px 7px;
+    }
+
+    .btn-circle-sm {
+        width: 50px;
+        height: 50px;
         text-align: center;
         padding: 6px 0;
         font-size: 12px;
@@ -27,30 +44,55 @@
         text-align: center;
     }
 
-    /*@font-face {*/
-        /*font-family: 'roboto';*/
-        /*src: url('../fonts/roboto.ttf');*/
-        /*src: local('../css/bootstrap-3.3.7-dist/fonts/roboto.ttf')*/
-    /*}*/
-
-    /*@font-face {*/
-        /*font-family: 'gunplay';*/
-        /*src: url('../fonts/gunplay.ttf');*/
-        /*src: local('../css/bootstrap-3.3.7-dist/fonts/gunplay.ttf')*/
-    /*}*/
-
     .btn:hover{
         transition: 0.4s;
     }
 
-     .sidebar-nav li{
+    .carousel-inner .item{
+        height: 300px;
+    }
+
+    .carousel-inner{
+        background-color: #337ab7;
+    }
+
+    .sidebar-nav li:hover{
+     background-color: #dddddd;
+    }
+
+    #sidenav01 .active{
          width: 100%;
-     }
+    }
 
-     .sidebar-nav li span{
-         margin-right: 10px;
-     }
+    #sidenav01 li{
+        width: 100%;
+    }
 
-     .sidebar-nav li:hover{
-         background-color: #dddddd;
-     }
+    .glyphicon{
+        margin-right: 7px;
+    }
+
+    .footer .container {
+     background-color: #101010;
+    }
+
+    .nopadding {
+       padding: 0 !important;
+       margin: 0 !important;
+    }
+
+    #store_board{
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .item_img{
+        max-height: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .product:hover{
+        transition: 0.4s;
+        box-shadow: 2px 2px #cdcdcd;
+    }

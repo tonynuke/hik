@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navigation %}
+    <div class="navbar-form navbar-right">
+
+        <button class="btn btn-default" data-target="#storeModal"
+                data-toggle="modal">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <span class="nopadding" id="reclama">{{ cart_sum }}</span>
+            <span class="nopadding">руб.</span>
+            <span>Оформить заказ!</span>
+        </button>
+    </div>
+
+{% endblock %}
+
+<!-- body-->
+{% block body %}
+
+    <div id="store_board" class="container">
+        <div class="row">
+
+            {% for item in cart.cart_items.all %}
+
+                <!-- item -->
+
+                <div class="product container-fluid">
+
+                    <div class="row">
+                        <label>
+                            {{ item.item.title }}
+                            {{ item.item.price }} р.
+                        </label>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="product-img col-sm-4">
+                            <img class="item_img img-responsive center-block"
+                                 src="{{ item.item.image.url }}"/>
+                        </div>
+
+                        <div class="container-fluid col-sm-5">
+                            <p>
+                                {{ item.item.description }}
+                            </p>
+                        </div>
+
+                        <div class="container col-sm-3">
+                            <div class="row">
+                                <button class="nopadding remove_button btn btn-primary btn-circle-sm"
+                                        id="{{ item.item.id }}">-
+                                </button>
+                                <button class="nopadding add_button btn btn-primary btn-circle-sm"
+                                        id="{{ item.item.id }}">+
+                                </button>
+                            </div>
+                            <br>
+                            <div class="row">
+                                В корзине:
+                                <label id="label{{ item.item.id }}">{{ item.quantity }}</label> шт.
+                                <br>
+                                На &nbspсумму:
+                                <label id="pricelabel{{ item.item.id }}"> {{ item.get_price }}</label>
+                                руб.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+    <!-- магазины -->
+    <div id="storeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">
+                        Оформить заказ
+                    </h4>
+                </div>
+
+                <div class="container-fluid">
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Имя">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Телефон">
+                        <br>
+                        <p>
+                            Оставьте заказ и с Вами свяжутся, как только он будет готов!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Оформить</button>
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
